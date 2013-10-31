@@ -1,0 +1,20 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"ApplySyntax",
+		"BracketHighlighter",
+		"Emmet",
+		"GitGutter",
+		"Handlebars",
+		"jQuery",
+		"JSHint",
+		"LESS",
+		"nginx",
+		"Package Control",
+		"Sass",
+		"Solarized Color Scheme",
+		"Theme - Soda",
+		"View In Browser"
+	]
+}

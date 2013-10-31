@@ -1,0 +1,21 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+ZSH_THEME="sunrise"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+plugins=(osx git rbenv)
+
+# Actually use oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# Set a baseline for the $PATH
+export PATH=/usr/local/bin:/opt/X11/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# Add Postgres.app to $PATH
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+
+# Ruby
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init - zsh)"
