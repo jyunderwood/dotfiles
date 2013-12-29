@@ -23,13 +23,13 @@
 	<key>DVTConsoleExectuableOutputTextFont</key>
 	<string>AnonymousPro-Bold - 12.0</string>
 	<key>DVTConsoleTextBackgroundColor</key>
-	<string>0.989434 0.957944 0.86406 1</string>
+	<string>0.0187547 0.126486 0.159698 1</string>
 	<key>DVTConsoleTextInsertionPointColor</key>
-	<string>0.989434 0.957944 0.86406 1</string>
+	<string>0.989546 0.962801 0.873603 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
-	<string>0.916111 0.890012 0.797811 1</string>
+	<string>0.0438428 0.163526 0.195045 1</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
-	<string>0.347924 0.351372 0.717917 1</string>
+	<string>0.510176 0.569159 0.567935 1</string>
 	<key>DVTSourceTextBackground</key>
 	<string>0.0187547 0.126486 0.159698 1</string>
 	<key>DVTSourceTextBlockDimBackgroundColor</key>

@@ -47,7 +47,7 @@ Some basic tools to install
     rm -rf $HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
     ln -s $HOME/.dotfiles/sublime $HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 
-## xCode
+## Xcode
 
     echo 'Link up preference files for Xcode'
     rm -rf $HOME/Library/Developer/Xcode/UserData
