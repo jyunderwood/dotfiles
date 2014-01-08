@@ -2,6 +2,6 @@
 
 xcode/*.xcuserstate
 
-sublime/Package Control.cache
+sublime/*.cache
 sublime/Package Control.last-run
 sublime/Package Control.system-ca-bundle
