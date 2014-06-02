@@ -15,12 +15,12 @@ Install Xcode and [XQuartz](http://xquartz.macosforge.org/) first.
     xcode-select --install
 
     echo 'Install Homebrew'
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
     brew doctor
 
 Some basic tools to install
 
-    brew install wget git rbenv ruby-build
+    brew install wget pyenv rbenv ruby-build
 
 ## ZSH
 
@@ -55,3 +55,7 @@ Some basic tools to install
 
     echo 'Add iOS Simulator to Launchpad'
     ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
+
+## Transmission
+
+Use `http://list.iblocklist.com/?list=bt_level1&fileformat=p2p&archiveformat=gz` as the blocklist url for Transmission.

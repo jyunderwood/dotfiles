@@ -22,7 +22,8 @@
 		".git",
 		".sass-cache",
 		".bundle",
-		"bundle"
+		"bundle",
+		"__pycache__"
 	],
 	"font_face": "Anonymous Pro",
 	"font_options":
@@ -34,9 +35,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"GitGutter",
-		"Handlebars"
+		"Vintage"
 	],
 	"margin": 2,
 	"new_window_settings":

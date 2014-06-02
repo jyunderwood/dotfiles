@@ -4,6 +4,7 @@
 	[
 		"ApplySyntax",
 		"BracketHighlighter",
+		"Djaneiro",
 		"Emmet",
 		"GitGutter",
 		"Handlebars",
@@ -14,7 +15,6 @@
 		"Package Control",
 		"Sass",
 		"Solarized Color Scheme",
-		"Theme - Soda",
-		"View In Browser"
+		"Theme - Soda"
 	]
 }
