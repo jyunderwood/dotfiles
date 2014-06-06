@@ -1,7 +1,9 @@
 .DS_Store
 
-xcode/*.xcuserstate
+local/
 
-sublime/*.cache
-sublime/Package Control.last-run
-sublime/Package Control.system-ca-bundle
+apps/sublime/*.cache
+apps/sublime/Package Control.last-run
+apps/sublime/Package Control.system-ca-bundle
+
+apps/xcode/*.xcuserstate
