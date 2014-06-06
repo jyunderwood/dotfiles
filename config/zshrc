@@ -1,0 +1,51 @@
+###############################################################################
+# oh-my-zsh                                                                   #
+###############################################################################
+
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set oh-my-zsh Theme
+ZSH_THEME="ys"
+
+# oh-my-zsh Plugins (listed in ~/.oh-my-zsh/plugins/*)
+plugins=(osx git brew rbenv pyenv)
+
+# Use oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+
+###############################################################################
+# ENV                                                                         #
+###############################################################################
+
+export EDITOR=vim
+
+
+###############################################################################
+# PATH                                                                        #
+###############################################################################
+
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
+
+# Ruby
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Python
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# Add Postgres.app to $PATH
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+
+
+###############################################################################
+# Extending                                                                   #
+###############################################################################
+
+function dotlink() {
+  ln -s ~/dotfiles/config/$1 ~/.$1
+}
+
+source ~/.dotfiles/apps/zsh/aliases.zsh
+source ~/.dotfiles/local/zshrc

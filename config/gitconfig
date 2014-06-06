@@ -1,0 +1,47 @@
+[alias]
+  a = add
+  b = branch
+  ba = branch -a --color
+  bd = branch -d
+  bt = branch --track
+  bdd = branch -D
+  c = commit
+  cnv = commit --no-verify
+  ca = commit --amend
+  cb = checkout -b
+  cm = commit -m
+  cmnv = commit --no-verify -m
+  co = checkout
+  c- = checkout -- .
+  cpx = cherry-pick -x
+  d = diff --color
+  dc = diff --color --cached
+  fo = fetch origin
+  g = gc
+  l = log --color
+  ld = log -p --color
+  lp = log --color --pretty=oneline
+  ls = log --color --stat-name-width=120
+  lsw = log --stat=800,400 --color
+  m = merge
+  p = pull
+  pn = remote prune origin
+  ra = rebase --abort
+  rb = rebase master
+  rc = rebase --continue
+  rs = reset HEAD --
+  rshh = reset --hard HEAD
+  s = status
+  pull = pull --ff-only
+  undo = reset --soft HEAD^
+  who = shortlog -s
+
+[user]
+  name = Jonathan Underwood
+  email = jonathan@jyunderwood.com
+
+[github]
+  user = jyunderwood
+
+[push]
+  default = simple
