@@ -4,9 +4,10 @@
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.dotfiles/apps/oh-my-zsh
 
 # Set oh-my-zsh Theme
-ZSH_THEME="ys"
+ZSH_THEME="jyu"
 
 # oh-my-zsh Plugins (listed in ~/.oh-my-zsh/plugins/*)
 plugins=(osx git brew rbenv pyenv)

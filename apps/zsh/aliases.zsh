@@ -1,4 +1,5 @@
 alias ls='ls -lhF'
+alias rezsh='source ~/.zshrc'
 
 # Ruby
 alias rake='noglob rake'

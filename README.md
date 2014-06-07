@@ -1,6 +1,6 @@
-# Dot Files
+# Dotfiles
 
-Contains my dotfiles and some initializing instructions and commands for OS X and Xcode.
+Contains my dotfiles and some initializing instructions and commands for OS X and applications.
 
 ## Setup
 
@@ -21,7 +21,7 @@ Install Xcode and [XQuartz](http://xquartz.macosforge.org/) first.
 
 Some basic tools to install
 
-    brew install vim wget pyenv rbenv ruby-build
+    brew install tmux vim wget pyenv rbenv ruby-build
 
 ## Other Applications
 
@@ -54,4 +54,4 @@ Some basic tools to install
 ### Transmission
 
     echo 'Set Transmission preferences'
-    ~/.dotfiles/init/transmission.sh
+    $HOME/.dotfiles/init/transmission.sh
