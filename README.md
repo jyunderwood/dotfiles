@@ -22,7 +22,7 @@ Install Xcode and [XQuartz](http://xquartz.macosforge.org/) first.
 Some basic tools to install
 
     brew install tmux reattach-to-user-namespace
-    brew install vim wget rbenv ruby-build
+    brew install vim wget rbenv ruby-build rbenv-readline rbenv-gem-rehash
 
 ## Other Applications
 
