@@ -1,0 +1,26 @@
+.DS_Store
+
+# Ruby
+/.bundle/
+.ruby-version
+.ruby-gemset
+.rvmrc
+*.gem
+*.rbc
+
+# Ruby Motion
+.repl_history
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node
+.grunt
+node_modules

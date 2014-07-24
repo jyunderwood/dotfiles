@@ -31,7 +31,14 @@ export EDITOR=vim
 export PATH="/usr/local/bin:$PATH"
 
 # Ruby
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh --no-rehash)"; fi
+
+# Node
+source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
+
+# Android
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Add Postgres.app to $PATH
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
@@ -42,7 +49,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 ###############################################################################
 
 function dotlink() {
-  ln -s ~/dotfiles/config/$1 ~/.$1
+  ln -s ~/.dotfiles/config/$1 ~/.$1
 }
 
 source ~/.dotfiles/apps/zsh/aliases.zsh
