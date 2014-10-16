@@ -43,6 +43,10 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 # Add Postgres.app to $PATH
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
+# Go
+export GOPATH="$HOME/Code/GoProjects"
+export PATH="$GOPATH/bin:$PATH"
+
 
 ###############################################################################
 # Extending                                                                   #

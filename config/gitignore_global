@@ -8,6 +8,9 @@
 *.gem
 *.rbc
 
+.env.production
+./config/database.yml
+
 # Ruby Motion
 .repl_history
 build/
