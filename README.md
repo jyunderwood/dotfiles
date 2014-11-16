@@ -10,19 +10,14 @@ Contains my dotfiles and some initializing instructions and commands for OS X an
 
 ## Homebrew
 
-Install Xcode and [XQuartz](http://xquartz.macosforge.org/) first.
+Install Xcode and, if you need X11 tools, [XQuartz](http://xquartz.macosforge.org/) first.
 
     echo 'Install Commandline Tools for OS X'
     xcode-select --install
 
     echo 'Install Homebrew'
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew doctor
-
-Some basic tools to install
-
-    brew install tmux reattach-to-user-namespace
-    brew install vim wget rbenv ruby-build rbenv-readline rbenv-gem-rehash
 
 ## Other Applications
 

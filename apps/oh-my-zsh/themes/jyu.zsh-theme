@@ -24,4 +24,4 @@ PROMPT="
 $PROMPT_DIRECTORY $PROMPT_GIT_INFO
 $PROMPT_CHAR"
 
-RPROMPT='%{$fg[red]%}$(rbenv version-name)%{$reset_color%}%'
+RPROMPT='%{$fg[red]%}$(rvm-prompt)%{$reset_color%}%'
