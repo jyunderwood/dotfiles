@@ -16,6 +16,8 @@ else
 
   cd ~
 
+  ln -s ~/.dotfiles/apps/vim ~/.vim
+
   git clone git://github.com/robbyrussell/oh-my-zsh.git  ~/.oh-my-zsh
   chsh -s /bin/zsh
   source ~/.zshrc
