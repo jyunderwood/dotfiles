@@ -2,18 +2,12 @@
 
 # Ruby
 /.bundle/
+.sass-cache
 .ruby-version
 .ruby-gemset
 .rvmrc
 *.gem
 *.rbc
-
-.env.production
-./config/database.yml
-
-# Ruby Motion
-.repl_history
-build/
 
 # Python
 __pycache__/
