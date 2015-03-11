@@ -27,13 +27,18 @@ export EDITOR="vim"
 # PATH                                                                        #
 ###############################################################################
 
-# Homebrew
+# Arrange PATH
 export PATH="/usr/local/bin:$PATH"
 
+# Ruby
+export RVM_DIR=$HOME/.rvm
+source $RVM_DIR/scripts/rvm
+rvm use 2.2.0
+
 # Node
-# source $(brew --prefix nvm)/nvm.sh
-# export NVM_DIR=~/.nvm
-# nvm use 0.10
+export NVM_DIR=$HOME/.nvm
+source $NVM_DIR/nvm.sh
+nvm use iojs
 
 # Add Postgres.app to $PATH
 # export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
@@ -44,8 +49,10 @@ export PATH="/usr/local/bin:$PATH"
 ###############################################################################
 
 function dotlink() {
-  ln -s ~/.dotfiles/config/$1 ~/.$1
+  ln -s $HOME/.dotfiles/config/$1 ~/.$1
 }
 
-source ~/.dotfiles/apps/zsh/aliases.zsh
-source ~/.dotfiles/local/zshrc
+source $HOME/.dotfiles/apps/zsh/aliases.zsh
+source $HOME/.dotfiles/local/zshrc
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
