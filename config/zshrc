@@ -38,7 +38,7 @@ rvm use 2.2.0
 # Node
 export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
-nvm use iojs
+nvm use 0.12.0
 
 # Add Postgres.app to $PATH
 # export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
