@@ -4,7 +4,7 @@
 		"single_line": false
 	},
 	"bold_folder_lables": true,
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"command": "reindent",
 	"create_window_at_startup": false,
 	"default_encoding": "UTF-8",
@@ -22,7 +22,6 @@
 		".git",
 		".sass-cache",
 		".bundle",
-		"bundle",
 		"__pycache__"
 	],
 	"font_face": "Anonymous Pro",
@@ -50,7 +49,7 @@
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"tab_size": 2,
-	"theme": "Soda Light.sublime-theme",
+	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,

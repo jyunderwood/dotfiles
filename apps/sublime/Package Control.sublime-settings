@@ -1,25 +1,32 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"ApplySyntax",
 		"BracketHighlighter",
 		"CoffeeScript",
-		"Djaneiro",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
 		"Emmet",
 		"GitGutter",
 		"Handlebars",
 		"Indent XML",
-		"Jedi - Python autocompletion",
 		"Jinja2",
 		"jQuery",
 		"JSHint",
 		"LESS",
 		"nginx",
 		"Package Control",
+		"Rust",
 		"Sass",
 		"Solarized Color Scheme",
 		"Theme - Soda",
+		"Theme - Spacegray",
+		"TidyHTML5",
+		"TOML",
 		"VimL"
 	]
 }

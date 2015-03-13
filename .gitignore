@@ -5,5 +5,7 @@ local/
 apps/sublime/*.cache
 apps/sublime/Package Control.last-run
 apps/sublime/Package Control.system-ca-bundle
+apps/sublime/Package Control.user-ca-bundle
+apps/sublime/Package Control.merged-ca-bundle
 
 apps/xcode/*.xcuserstate

@@ -9,8 +9,11 @@ Before cloning this repo, you'll want to install Xcode, in the Mac App Store, fi
 This will symlink configuration files and the `.vim` directory, clone [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh), and change the shell to Z shell.
 
     echo 'Initial setup'
-    git clone git@github.com:jyunderwood/dotfiles.git ~/.dotfiles
-    $HOME/.dotfiles/init/install.sh
+    git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
+    cd $HOME/.dotfiles
+    git submodule init
+    git submodule update
+    ./init/install.sh
 
 ### OS X
 
