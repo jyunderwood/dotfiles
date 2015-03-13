@@ -1,9 +1,20 @@
 execute pathogen#infect()
-
 syntax on
 filetype plugin indent on
 
 set t_Co=256
+set background=dark
+colors spacegray
+
+set backupdir=~/.vim/dirs/backups
+set directory=~/.vim/dirs/swaps
+
+map <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git,pkg --languages=-javascript,sql<CR><CR>
+set tags+=.git/tags
+
+" Explicit about Space Errors
+let ruby_space_errors = 1
+let c_space_errors = 1
 
 " Auto save files on window blur
 "autocmd! FocusLost * :silent! up
@@ -18,38 +29,38 @@ set t_Co=256
 
 
 " Visual
-  set number
   set ruler
-  set colorcolumn=80
-  "set guioptions=ce
+  set number
+  set relativenumber
+  set colorcolumn=81
+  set scrolloff=2
   set showmatch                 " Briefly jump to a paren once it's balanced
-  "set linespace=2
-  set background=dark
-  colors spacegray
+  set linespace=2
+  set showcmd                   " Display incomplete commands
 
 " Tabs/Whitespace
-  "set tabstop=2
-  "set shiftwidth=2
-  "set autoindent
-  "set smarttab
-  "set expandtab
-  "set nowrap
+  set tabstop=2
+  set shiftwidth=2
+  set autoindent
+  set smarttab
+  set expandtab
+  set nowrap
   "set list
   "set listchars=tab:▸\ ,eol:¬,trail:·
-  "set backspace=indent,eol,start " allow backspacing over everything in insert mode
+  set backspace=indent,eol,start " allow backspacing over everything in insert mode
   "set invlist
 
 " Misc
   set shell=zsh
   set nocompatible
-  set paste
-  set switchbuf=useopen         " Don't re-open already opened buffers
+  "set paste
+  "set switchbuf=useopen         " Don't re-open already opened buffers
   "set nostartofline             " Avoid moving cursor to BOL when jumping around
   "set virtualedit=all           " Let cursor move past the last char
   "set whichwrap=b,s,h,l,<,>,[,]
   "let mapleader = ','
-  set autoread                  " watch for file changes
-  set mouse=a
+  "set autoread                  " watch for file changes
+  "set mouse=a
   "set fileformats=unix
 
 " Bells
@@ -59,7 +70,7 @@ set t_Co=256
 
 " Searching
   "set hlsearch
-  "set incsearch
+  set incsearch
   "set ignorecase
   "set smartcase
 
@@ -68,7 +79,7 @@ set t_Co=256
   "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp
 
 " Status bar
-  "set laststatus=2
+  set laststatus=2
   "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
   "set statusline=%<%f\ %h%m%r%%=%-14.(%l,%c%V%)\ %P
 
@@ -77,9 +88,6 @@ set t_Co=256
   "set foldmethod=marker                            " Fold on the marker
   "set foldlevel=100                                " Don't autofold anything (but I can still fold manually)
   "set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-
-  set backupdir=~/.vim/dirs/backups
-  set directory=~/.vim/dirs/swaps
 
 " Nicer text navigation
   "nmap j gj
@@ -93,8 +101,8 @@ set t_Co=256
   "vnoremap > >gv
 
 " Nicer splitting
-  set splitbelow
-  set splitright
+  "set splitbelow
+  "set splitright
   "map <C-_> :split<CR>
   "map <C-\> :vsplit<CR>
 
