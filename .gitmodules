@@ -1,0 +1,23 @@
+[submodule "apps/vim/bundle/nerdtree"]
+path = apps/vim/bundle/nerdtree
+url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "apps/vim/bundle/vim-airline"]
+path = apps/vim/bundle/vim-airline
+url = https://github.com/bling/vim-airline.git
+
+[submodule "apps/vim/bundle/vim-bundler"]
+path = apps/vim/bundle/vim-bundler
+url = https://github.com/tpope/vim-bundler.git
+
+[submodule "apps/vim/bundle/vim-fugitive"]
+path = apps/vim/bundle/vim-fugitive
+url = https://github.com/tpope/vim-fugitive.git
+
+[submodule "apps/vim/bundle/vim-rails"]
+path = apps/vim/bundle/vim-rails
+url = https://github.com/tpope/vim-rails.git
+
+[submodule "apps/vim/bundle/vim-unimpaired"]
+path = apps/vim/bundle/vim-unimpaired
+url = https://github.com/tpope/vim-unimpaired.git
