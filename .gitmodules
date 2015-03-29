@@ -21,3 +21,7 @@ url = https://github.com/tpope/vim-rails.git
 [submodule "apps/vim/bundle/vim-unimpaired"]
 path = apps/vim/bundle/vim-unimpaired
 url = https://github.com/tpope/vim-unimpaired.git
+
+[submodule "apps/vim/bundle/vim-gitgutter"]
+path = apps/vim/bundle/vim-gitgutter
+url = https://github.com/airblade/vim-gitgutter.git

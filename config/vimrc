@@ -17,16 +17,19 @@ let ruby_space_errors = 1
 let c_space_errors = 1
 
 " Auto save files on window blur
-"autocmd! FocusLost * :silent! up
+autocmd! FocusLost * :silent! up
 
 " make and python use real tabs
-"au! FileType make   set noexpandtab
-"au! FileType python set noexpandtab
+au! FileType make   set noexpandtab
+au! FileType python set noexpandtab
 
 " Set file types
-"au! BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
-"au! BufRead,BufNewFile gitconfig                             set ft=gitconfig
+au! BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
+au! BufRead,BufNewFile gitconfig                             set ft=gitconfig
 
+" Set path
+set suffixadd=.rb
+set path+=lib/**,test/**,spec/**
 
 " Visual
   set ruler
@@ -53,6 +56,7 @@ let c_space_errors = 1
 " Misc
   set shell=zsh
   set nocompatible
+  set history=50
   "set paste
   "set switchbuf=useopen         " Don't re-open already opened buffers
   "set nostartofline             " Avoid moving cursor to BOL when jumping around
