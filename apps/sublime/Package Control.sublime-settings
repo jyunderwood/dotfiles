@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"ApplySyntax",
+		"Base16 Color Schemes",
 		"BracketHighlighter",
 		"CoffeeScript",
 		"Dockerfile Syntax Highlighting",
@@ -15,16 +16,11 @@
 		"Handlebars",
 		"Indent XML",
 		"Jinja2",
-		"jQuery",
 		"JSHint",
-		"LESS",
 		"nginx",
 		"Package Control",
-		"Rust",
 		"Sass",
-		"Solarized Color Scheme",
 		"Theme - Soda",
-		"Theme - Spacegray",
 		"TidyHTML5",
 		"TOML",
 		"VimL"

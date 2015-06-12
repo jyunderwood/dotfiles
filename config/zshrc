@@ -20,6 +20,15 @@ source $ZSH/oh-my-zsh.sh
 # ENV                                                                         #
 ###############################################################################
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi
+
+BASE16_SHELL="$HOME/.dotfiles/apps/zsh/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 export EDITOR="vim"
 
 
@@ -31,14 +40,14 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:$PATH"
 
 # Ruby
-export RVM_DIR=$HOME/.rvm
-source $RVM_DIR/scripts/rvm
-rvm use 2.2.0
+#export RVM_DIR=$HOME/.rvm
+#source $RVM_DIR/scripts/rvm
+#rvm use 2.2.0
 
 # Node
-export NVM_DIR=$HOME/.nvm
-source $NVM_DIR/nvm.sh
-nvm use 0.12.0
+#export NVM_DIR=$HOME/.nvm
+#source $NVM_DIR/nvm.sh
+#nvm use 0.12.0
 
 # Add Postgres.app to $PATH
 # export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
