@@ -11,3 +11,4 @@ apps/sublime/GoSublime
 apps/sublime/GoSublime-aux.sublime-settings
 
 apps/xcode/*.xcuserstate
+apps/xcode/IB Support
