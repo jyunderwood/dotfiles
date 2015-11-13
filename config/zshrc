@@ -41,21 +41,12 @@ export PATH="/usr/local/bin:$PATH"
 
 # Ruby
 export RVM_DIR=$HOME/.rvm
-export PATH="$PATH:$RVM_DIR/bin"
+export PATH="$RVM_DIR/bin:$PATH"
 source $RVM_DIR/scripts/rvm
-rvm use 2.2.2
 
 # Node
 export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
-nvm use 0.12.2
-
-# Go
-export GOPATH=$HOME/Code/golang
-export PATH=$PATH:$GOPATH/bin
-
-# Add Postgres.app to $PATH
-# export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 
 ###############################################################################
