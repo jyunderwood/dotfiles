@@ -34,6 +34,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Babel",
 		"Vintage"
 	],
 	"margin": 2,

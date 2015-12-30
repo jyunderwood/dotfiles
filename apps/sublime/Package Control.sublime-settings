@@ -3,6 +3,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"Babel"
 	],
 	"installed_packages":
 	[
@@ -27,6 +28,7 @@
 		"Puppet",
 		"RSpec",
 		"Sass",
+		"Swift for F*ing Sublime",
 		"Theme - Soda",
 		"TidyHTML5",
 		"TOML",
