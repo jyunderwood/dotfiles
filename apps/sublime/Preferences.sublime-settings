@@ -4,7 +4,7 @@
 		"single_line": false
 	},
 	"bold_folder_lables": true,
-	"color_scheme": "Packages/Base16 Color Schemes/base16-ocean.dark.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/themes/base16-flat.tmTheme",
 	"command": "reindent",
 	"create_window_at_startup": false,
 	"default_encoding": "UTF-8",

@@ -62,5 +62,3 @@ function dotlink() {
 
 source $HOME/.dotfiles/apps/zsh/aliases.zsh
 source $HOME/.dotfiles/local/zshrc
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
