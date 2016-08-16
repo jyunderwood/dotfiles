@@ -1,5 +1,6 @@
 alias ls='ls -lhGF'
 alias rezsh='source ~/.zshrc'
+alias prettyjson='python -m json.tool'
 
 # Ruby
 alias rake='noglob rake'

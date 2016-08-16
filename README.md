@@ -8,7 +8,7 @@ Before cloning this repo, you'll want to install Xcode, perhaps from the Mac App
 
 This will symlink configuration files and the `.vim` directory, clone [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh), and change the shell to Z shell.
 
-```
+```bash
 echo 'Initial setup'
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
@@ -21,7 +21,7 @@ git submodule update
 
 To apply some new system preference to OS X, such as set save panels to expanded by default.
 
-```
+```bash
 echo 'Configure OS X'
 $HOME/.dotfiles/init/osx.sh
 ```
@@ -30,7 +30,7 @@ $HOME/.dotfiles/init/osx.sh
 
 If you need X11 tools, install [XQuartz](http://www.xquartz.org) before Homebrew.
 
-```
+```bash
 echo 'Install Commandline Tools for OS X'
 xcode-select --install
 
@@ -41,25 +41,25 @@ brew doctor
 
 ### RVM
 
-```
+```bash
 echo 'Install RVM and Ruby'
 curl -sSL https://get.rvm.io | bash -s stable
-rvm install 2.2.3
-rvm use default 2.2.3
+rvm install 2.3.0
+rvm use default 2.3.0
 ```
 
 ### NVM
 
-```
+```bash
 echo 'Install NVM and Node'
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-nvm install 4.2.2
-nvm alias default 4.2.2
+nvm install 4.2.4
+nvm alias default 4.2.4
 ```
 
 ### Xcode
 
-```
+```bash
 echo 'Link up preference files for Xcode'
 rm -rf $HOME/Library/Developer/Xcode/UserData
 ln -s $HOME/.dotfiles/apps/xcode $HOME/Library/Developer/Xcode/UserData
@@ -67,7 +67,7 @@ ln -s $HOME/.dotfiles/apps/xcode $HOME/Library/Developer/Xcode/UserData
 
 ### Sublime Text 2 (on OS X)
 
-```
+```bash
 echo 'Create Sublime Text 2 shortcut'
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
