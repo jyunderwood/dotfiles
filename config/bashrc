@@ -32,6 +32,9 @@ export PATH="$HOME/.homebrew/bin:$PATH"
 export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
 
+# Postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
 # Ruby
 export RVM_DIR=$HOME/.rvm
 source $RVM_DIR/scripts/rvm
