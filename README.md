@@ -6,7 +6,7 @@ Before cloning this repo, you'll want to install Xcode, perhaps from the Mac App
 
 ## Setup
 
-This will symlink configuration files and the `.vim` directory, clone [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh), and change the shell to Z shell.
+This will symlink configuration files and the `.vim` directory.
 
 ```bash
 echo 'Initial setup'
@@ -18,8 +18,6 @@ git submodule update
 ```
 
 ### macOS
-
-Terminal.app theme is based on [base16 Ocean](https://github.com/mdo/ocean-terminal).
 
 To apply some new system preference to macOS, such as set save panels to expanded by default.
 
