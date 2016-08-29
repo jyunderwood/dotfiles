@@ -1,0 +1,38 @@
+###############################################################################
+# Extending                                                                   #
+###############################################################################
+
+source $HOME/.dotfiles/apps/shell/aliases.sh
+source $HOME/.dotfiles/local/shell
+
+# Custom bash prompt
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\w\$(parse_git_branch) \$ "
+
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+
+###############################################################################
+# ENV                                                                         #
+###############################################################################
+
+export EDITOR="vim"
+
+# Arrange PATH
+export PATH="/usr/local/bin:$PATH"
+
+# Homebrew
+export PATH="$HOME/.homebrew/bin:$PATH"
+
+# Node
+export NVM_DIR=$HOME/.nvm
+source $NVM_DIR/nvm.sh
+
+# Ruby
+export RVM_DIR=$HOME/.rvm
+source $RVM_DIR/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -1,3 +1,7 @@
+[submodule "apps/vim/bundle/vim-colors-solarized"]
+path = apps/vim/bundle/vim-colors-solarized
+url = https://github.com/altercation/vim-colors-solarized.git
+
 [submodule "apps/vim/bundle/nerdtree"]
 path = apps/vim/bundle/nerdtree
 url = https://github.com/scrooloose/nerdtree.git
