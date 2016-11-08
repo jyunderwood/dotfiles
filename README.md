@@ -42,8 +42,8 @@ brew doctor
 ```bash
 echo 'Install RVM and Ruby'
 curl -sSL https://get.rvm.io | bash -s stable
-rvm install 2.3.0
-rvm use default 2.3.0
+rvm install 2.3.1
+rvm use default 2.3.1
 ```
 
 ### NVM
@@ -51,6 +51,6 @@ rvm use default 2.3.0
 ```bash
 echo 'Install NVM and Node'
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-nvm install 4.2.4
-nvm alias default 4.2.4
+nvm install 6.9.1
+nvm alias default 6.9.1
 ```
