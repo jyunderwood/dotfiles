@@ -43,7 +43,7 @@ brew doctor
 echo 'Install RVM and Ruby'
 curl -sSL https://get.rvm.io | bash -s stable
 rvm install 2.3.1
-rvm use default 2.3.1
+rvm --default use 2.3.1
 ```
 
 ### NVM
