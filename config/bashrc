@@ -25,12 +25,23 @@ export EDITOR="vim"
 # Arrange PATH
 export PATH="/usr/local/bin:$PATH"
 
-# Homebrew
-export PATH="$HOME/.homebrew/bin:$PATH"
+# Android
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/tools"
 
 # Node
 export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
+
+# Python
+# export PIP_REQUIRE_VIRTUALENV=true
+
+# Go
+# export GOPATH=$HOME/GoProjects
+# export PATH="$GOPATH/bin:$PATH"
+
+# PHP
+# export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
