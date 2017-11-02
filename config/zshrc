@@ -1,0 +1,36 @@
+###############################################################################
+# Oh My Zsh                                                                   #
+###############################################################################
+
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+###############################################################################
+# ENV                                                                         #
+###############################################################################
+
+source $HOME/.dotfiles/apps/shell/aliases.sh
+source $HOME/.dotfiles/local/shell
+
+export EDITOR="vim"
+
+# Arrange PATH
+export PATH="/usr/local/bin:$PATH"
+
+# Postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# Python
+# export PIP_REQUIRE_VIRTUALENV=true
+
+# Node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ruby
+export RVM_DIR=$HOME/.rvm
+source $RVM_DIR/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin"

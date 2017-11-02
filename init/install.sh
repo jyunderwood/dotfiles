@@ -15,6 +15,4 @@ else
   done
 
   cd ~
-
-  ln -s ~/.dotfiles/apps/vim ~/.vim
 fi

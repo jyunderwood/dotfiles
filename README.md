@@ -1,8 +1,8 @@
 # Dotfiles
 
-Contains my dotfiles and some initializing instructions and commands for OS X and applications.
+Contains my dotfiles and some initializing instructions and commands for macOS and applications.
 
-Before cloning this repo, you'll want to install Xcode, perhaps from the Mac App Store, first.
+Before cloning this repo, you'll first want to install Xcode.
 
 ## Setup
 
@@ -11,10 +11,7 @@ This will symlink configuration files and the `.vim` directory.
 ```bash
 echo 'Initial setup'
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
-cd $HOME/.dotfiles
-git submodule init
-git submodule update
-./init/install.sh
+$HOME/.dotfiles/init/install.sh
 ```
 
 ### macOS
@@ -23,7 +20,7 @@ To apply some new system preference to macOS, such as set save panels to expande
 
 ```bash
 echo 'Configure macOS'
-$HOME/.dotfiles/init/osx.sh
+$HOME/.dotfiles/init/macos.sh
 ```
 
 ### Homebrew
@@ -33,24 +30,30 @@ echo 'Install Commandline Tools for macOS'
 xcode-select --install
 
 echo 'Install Homebrew'
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 ```
 
-### RVM
+### Ruby
 
 ```bash
 echo 'Install RVM and Ruby'
 curl -sSL https://get.rvm.io | bash -s stable
-rvm install 2.3.1
-rvm --default use 2.3.1
+rvm install 2.4.2
+rvm --default use 2.4.2
+
+echo 'Install Bundler'
+gem install bundler
 ```
 
-### NVM
+### Node
 
 ```bash
 echo 'Install NVM and Node'
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-nvm install 6.9.1
-nvm alias default 6.9.1
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+nvm install 8.9.0
+nvm alias default 8.9.0
+
+echo 'Install Yarn'
+brew install yarn --without-node
 ```
