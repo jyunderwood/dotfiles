@@ -9,19 +9,17 @@ Before cloning this repo, you'll first want to install Xcode.
 This will symlink configuration files and the `.vim` directory.
 
 ```bash
-echo 'Initial setup'
+echo 'Install oh-my-zsh'
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo 'Setup dotfiles'
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 $HOME/.dotfiles/init/install.sh
 ```
 
 ### macOS
 
-To apply some new system preference to macOS, such as set save panels to expanded by default.
-
-```bash
-echo 'Configure macOS'
-$HOME/.dotfiles/init/macos.sh
-```
+If you want to customize macOS preferences via the commandline, checkout [macos.sh](https://github.com/mathiasbynens/dotfiles/blob/main/.macos).
 
 ### Homebrew
 
@@ -30,30 +28,30 @@ echo 'Install Commandline Tools for macOS'
 xcode-select --install
 
 echo 'Install Homebrew'
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew doctor
 ```
 
 ### Ruby
 
 ```bash
-echo 'Install RVM and Ruby'
-curl -sSL https://get.rvm.io | bash -s stable
-rvm install 2.4.2
-rvm --default use 2.4.2
+echo 'Install rbenv and activate'
+brew install rbenv
+rbenv init
+source $HOME/.zshrc
+
+echo 'install Ruby v2.6.6'
+rbenv install 2.6.6
+rbenv global 2.6.6
 
 echo 'Install Bundler'
 gem install bundler
+rbenv rehash
 ```
 
 ### Node
 
 ```bash
-echo 'Install NVM and Node'
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-nvm install 8.9.0
-nvm alias default 8.9.0
-
-echo 'Install Yarn'
-brew install yarn --without-node
+echo 'Install Node.js and Yarn'
+brew install node yarn
 ```
