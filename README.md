@@ -32,11 +32,36 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
+#### Brew Bundle
+
+To save time installing requirements for various projects, you could create a `Brewfile`. Find out more about [Brew Bundle](https://github.com/Homebrew/homebrew-bundle/blob/master/README.md).
+
+Brewfile:
+```ruby
+# Runtimes
+brew 'rbenv'
+brew 'node'
+brew 'yarn'
+
+# Datastores
+brew 'redis'
+brew 'postgresql'
+brew 'elasticsearch'
+
+# Utilities
+tap 'heroku/brew'
+brew 'heroku'
+cask 'ngrok'
+
+# Libraries
+brew 'imagemagick' 
+brew 'poppler'
+```
+
 ### Ruby
 
 ```bash
-echo 'Install rbenv and activate'
-brew install rbenv
+echo 'Activate rbenv'
 rbenv init
 source $HOME/.zshrc
 
@@ -47,11 +72,4 @@ rbenv global 2.6.6
 echo 'Install Bundler'
 gem install bundler
 rbenv rehash
-```
-
-### Node
-
-```bash
-echo 'Install Node.js and Yarn'
-brew install node yarn
 ```
