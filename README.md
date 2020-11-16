@@ -6,7 +6,7 @@ Before cloning this repo, you'll first want to install Xcode.
 
 ## Setup
 
-This will symlink configuration files and the `.vim` directory.
+This will symlink configuration files.
 
 ```bash
 echo 'Install oh-my-zsh'
