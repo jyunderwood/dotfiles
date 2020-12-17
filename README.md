@@ -54,7 +54,7 @@ brew 'heroku'
 cask 'ngrok'
 
 # Libraries
-brew 'imagemagick' 
+brew 'imagemagick'
 brew 'poppler'
 ```
 
@@ -72,4 +72,12 @@ rbenv global 2.6.6
 echo 'Install Bundler'
 gem install bundler
 rbenv rehash
+```
+
+### Tips
+
+Some apps that you install from the web come with a quarantine attribute. This can prevent commandline tool helpers and built in updaters from working correctly. Notably in Visual Studio Code, GIT Tower, and Postman. You can remove them with the `xattr` command.
+
+```sh
+xattr -d com.apple.quarantine /Applications/AppName.app
 ```
