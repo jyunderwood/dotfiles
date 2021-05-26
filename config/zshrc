@@ -13,15 +13,12 @@ source $ZSH/oh-my-zsh.sh
 # ENV                                                                         #
 ###############################################################################
 
-source $HOME/.dotfiles/apps/shell/aliases.sh
-source $HOME/.dotfiles/local/shell
-
 # Arrange PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Editor
 export EDITOR="code -w"
 
-# Ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+source $HOME/.dotfiles/apps/shell/aliases.sh
+source $HOME/.dotfiles/local/shell

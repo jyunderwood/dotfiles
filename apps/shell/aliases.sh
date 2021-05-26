@@ -4,7 +4,7 @@ alias prettyjson='python -m json.tool'
 
 # Ruby
 alias bx='bundle exec'
-alias guard='bx guard -c'
+alias guard='bundle exec guard -c'
 
 # Xcode
 alias xcs.stable='sudo xcode-select -s /Applications/Xcode.app/Contents/Developer'
@@ -16,5 +16,5 @@ alias rm.pyc='find . -type f -name "*.pyc" -exec rm {} \;'
 alias rm.esub='find . -type d -exec rmdir 2>/dev/null {} \;'
 alias rm.dss='find . -type f -name ".DS_Store" -exec rm {} \;'
 
-# To force the use of the intel binary
+# Force the use of the Intel binary on Apple Silicon
 alias irun='arch -x86_64'
