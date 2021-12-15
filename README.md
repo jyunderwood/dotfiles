@@ -51,16 +51,16 @@ brew 'yarn'
 
 # Datastores
 brew 'redis'
-brew 'postgresql'
+
+# Libraries
+brew 'imagemagick'
+brew 'vips'
+brew 'poppler'
 
 # Utilities
 tap 'heroku/brew'
 brew 'heroku'
 cask 'ngrok'
-
-# Libraries
-brew 'imagemagick'
-brew 'poppler'
 ```
 
 ### Ruby
@@ -70,9 +70,8 @@ brew 'poppler'
 rbenv init
 source $HOME/.zshrc
 
-# Install Ruby v3.0.1
-rbenv install 3.0.1
-rbenv global 3.0.1
+rbenv install 3.0.3
+rbenv global 3.0.3
 
 # Install Bundler
 gem install bundler
@@ -86,12 +85,14 @@ rbenv rehash
 pyenv init
 source $HOME/.zshrc
 
-# Install Python 3.9.5
-pyenv install 3.9.5
-pyenv global 3.9.5
+pyenv install 3.10.0
+pyenv global 3.10.0
 
 # Update pip
-pip install -U pip
+python -m pip install -U pip
+
+# Python packages I use in Jupyter notebooks
+python -m pip install jupyterlab numpy matplotlib pillow pandas requests
 ```
 
 ### Tips
