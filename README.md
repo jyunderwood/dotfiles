@@ -95,6 +95,19 @@ python -m pip install -U pip
 python -m pip install jupyterlab numpy matplotlib pillow pandas requests
 ```
 
+### R
+
+```bash
+brew install r
+```
+
+Inside the R console, install tinytex to knit to pdf.
+
+```r
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
 ### Tips
 
 Some apps that you install from the web come with a quarantine attribute. This can prevent command line tool helpers and built in updaters from working correctly.
