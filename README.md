@@ -92,7 +92,7 @@ pyenv global 3.10.0
 python -m pip install -U pip
 
 # Python packages I use in Jupyter notebooks
-python -m pip install jupyterlab numpy matplotlib pillow pandas requests
+python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair
 ```
 
 ### R
