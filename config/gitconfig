@@ -1,6 +1,6 @@
 [user]
-	name = Jonathan Underwood
-	email = jonathan@jyunderwood.com
+  name = Jonathan Underwood
+  email = jonathan@jyunderwood.com
 [init]
   defaultBranch = main
 [pull]

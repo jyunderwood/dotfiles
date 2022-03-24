@@ -17,11 +17,7 @@ git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 $HOME/.dotfiles/init/install.sh
 ```
 
-### macOS
-
-If you want to customize macOS preferences via the command line, checkout [macos.sh](https://github.com/mathiasbynens/dotfiles/blob/main/.macos).
-
-### Homebrew
+## Homebrew
 
 ```bash
 echo 'Install Commandline Tools for macOS'
@@ -32,7 +28,7 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
-#### Brew Bundle
+### Brew Bundle
 
 To save time installing requirements for various projects, you could create a `Brewfile`. Find out more about [Brew Bundle](https://github.com/Homebrew/homebrew-bundle/blob/master/README.md).
 
@@ -63,7 +59,7 @@ brew 'heroku'
 cask 'ngrok'
 ```
 
-### Ruby
+## Ruby
 
 ```bash
 # Activate rbenv
@@ -78,24 +74,24 @@ gem install bundler
 rbenv rehash
 ```
 
-### Python
+## Python
 
 ```bash
 # Activate pyenv
 pyenv init
 source $HOME/.zshrc
 
-pyenv install 3.10.0
-pyenv global 3.10.0
+pyenv install 3.10.3
+pyenv global 3.10.3
 
 # Update pip
 python -m pip install -U pip
 
-# Python packages I use in Jupyter notebooks
+# Python packages I use
 python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair
 ```
 
-### R
+## R
 
 ```bash
 brew install r
@@ -108,7 +104,15 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
-### Tips
+## PostgreSQL
+
+On a Mac, using [Postgres.app](https://postgresapp.com), add its CLI tools to the path with:
+
+```sh
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+```
+
+## Quarantine Attribute on macOS
 
 Some apps that you install from the web come with a quarantine attribute. This can prevent command line tool helpers and built in updaters from working correctly.
 
