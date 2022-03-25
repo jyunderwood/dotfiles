@@ -88,7 +88,7 @@ pyenv global 3.10.3
 python -m pip install -U pip
 
 # Python packages I use
-python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair
+python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair scipy scikit-learn sympy nose statsmodels
 ```
 
 ## R

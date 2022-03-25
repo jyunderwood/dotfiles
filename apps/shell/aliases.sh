@@ -1,7 +1,7 @@
 alias ls='ls -lhGF'
 alias rezsh='source ~/.zshrc'
 alias prettyjson='python -m json.tool'
-alias httpserver = 'python -m http.server'
+alias httpserver='python -m http.server'
 
 # Clean up
 alias rm.gems='gem list --no-version | xargs gem uninstall -aIx'
