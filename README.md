@@ -42,8 +42,7 @@ brew 'rbenv'
 brew 'pyenv'
 
 # Node
-brew 'node'
-brew 'yarn'
+brew 'node@16'
 
 # Datastores
 brew 'redis'
@@ -66,8 +65,8 @@ cask 'ngrok'
 rbenv init
 source $HOME/.zshrc
 
-rbenv install 3.0.3
-rbenv global 3.0.3
+rbenv install 3.0.4
+rbenv global 3.0.4
 
 # Install Bundler
 gem install bundler
@@ -81,8 +80,8 @@ rbenv rehash
 pyenv init
 source $HOME/.zshrc
 
-pyenv install 3.10.3
-pyenv global 3.10.3
+pyenv install 3.10.4
+pyenv global 3.10.4
 
 # Update pip
 python -m pip install -U pip
