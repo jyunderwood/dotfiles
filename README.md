@@ -103,6 +103,12 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
+Install [Tidyverse](https://www.tidyverse.org)
+
+```r
+install.packages("tidyverse")
+```
+
 ## PostgreSQL
 
 On a Mac, using [Postgres.app](https://postgresapp.com), add its CLI tools to the path with:
