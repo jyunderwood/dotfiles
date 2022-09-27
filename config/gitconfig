@@ -1,7 +1,9 @@
 [user]
-  name = Jonathan Underwood
-  email = jonathan@jyunderwood.com
+	name = Jonathan Underwood
+	email = jonathan@jyunderwood.com
 [init]
-  defaultBranch = main
+	defaultBranch = main
+[core]
+	excludesfile = ~/.gitignore_global
 [pull]
-  rebase = true
+	rebase = true
