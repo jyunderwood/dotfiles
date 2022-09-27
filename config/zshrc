@@ -22,3 +22,6 @@ export EDITOR="code -w"
 
 source $HOME/.dotfiles/apps/shell/aliases.sh
 source $HOME/.dotfiles/local/shell
+
+# Disable Homebrew hints
+export HOMEBREW_NO_ENV_HINTS="1"
