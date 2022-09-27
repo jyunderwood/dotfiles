@@ -6,18 +6,20 @@ Before cloning this repo, you'll first want to install Xcode.
 
 ## Setup
 
-This will symlink configuration files.
+Install [Oh My Zsh](https://ohmyz.sh/#)
 
 ```bash
-# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-# Setup dotfiles
+Setup dotfiles
+
+```
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 $HOME/.dotfiles/init/install.sh
 ```
 
-## Homebrew
+Install [Homebrew](https://brew.sh)
 
 ```bash
 echo 'Install Commandline Tools for macOS'
@@ -28,11 +30,19 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
-### Brew Bundle
+## CLI Software
 
-To save time installing requirements for various projects, you could create a `Brewfile`. Find out more about [Brew Bundle](https://github.com/Homebrew/homebrew-bundle/blob/master/README.md).
+### Install with Homebrew
 
-Brewfile:
+```sh
+brew install rbenv pyenv node@16 redis imagemagick vips poppler r
+```
+
+#### Brew Bundle
+
+To save time installing requirements for various projects, A [Brew Bundle](https://github.com/Homebrew/homebrew-bundle/blob/master/README.md) file could be created.
+
+`Brewfile` contents:
 
 ```ruby
 # Ruby
@@ -58,7 +68,7 @@ brew 'heroku'
 cask 'ngrok'
 ```
 
-## Ruby
+### Ruby
 
 ```bash
 # Activate rbenv
@@ -73,15 +83,15 @@ gem install bundler
 rbenv rehash
 ```
 
-## Python
+### Python
 
 ```bash
 # Activate pyenv
 pyenv init
 source $HOME/.zshrc
 
-pyenv install 3.10.4
-pyenv global 3.10.4
+pyenv install 3.10.6
+pyenv global 3.10.6
 
 # Update pip
 python -m pip install -U pip
@@ -90,7 +100,7 @@ python -m pip install -U pip
 python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair scipy scikit-learn sympy nose statsmodels
 ```
 
-## R
+### R
 
 ```bash
 brew install r
@@ -109,7 +119,7 @@ Install [Tidyverse](https://www.tidyverse.org)
 install.packages("tidyverse")
 ```
 
-## PostgreSQL
+### PostgreSQL
 
 On a Mac, using [Postgres.app](https://postgresapp.com), add its CLI tools to the path with:
 
