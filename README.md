@@ -1,14 +1,12 @@
 # Dotfiles
 
-Contains my dotfiles and some initializing instructions and commands for macOS and applications.
-
-Before cloning this repo, you'll first want to install Xcode.
+Contains my dotfiles.
 
 ## Setup
 
 Install [Oh My Zsh](https://ohmyz.sh/#)
 
-```bash
+```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -21,7 +19,7 @@ $HOME/.dotfiles/init/install.sh
 
 Install [Homebrew](https://brew.sh)
 
-```bash
+```sh
 echo 'Install Commandline Tools for macOS'
 xcode-select --install
 
@@ -30,80 +28,61 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
-## CLI Software
-
-### Install with Homebrew
-
-```sh
-brew install rbenv pyenv node@16 redis imagemagick vips poppler r
-```
-
-#### Brew Bundle
-
-To save time installing requirements for various projects, A [Brew Bundle](https://github.com/Homebrew/homebrew-bundle/blob/master/README.md) file could be created.
-
-`Brewfile` contents:
-
-```ruby
-# Ruby
-brew 'rbenv'
-
-# Python
-brew 'pyenv'
-
-# Node
-brew 'node@16'
-
-# Datastores
-brew 'redis'
-
-# Libraries
-brew 'imagemagick'
-brew 'vips'
-brew 'poppler'
-
-# Utilities
-tap 'heroku/brew'
-brew 'heroku'
-cask 'ngrok'
-```
+## Software
 
 ### Ruby
 
-```bash
-# Activate rbenv
+```sh
+brew install rbenv
+# Or if on Linux
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+```
+
+```sh
 rbenv init
-source $HOME/.zshrc
+rbenv install 3.1.4
+rbenv global 3.1.4
 
-rbenv install 3.0.4
-rbenv global 3.0.4
-
-# Install Bundler
 gem install bundler
 rbenv rehash
 ```
 
 ### Python
 
-```bash
-# Activate pyenv
-pyenv init
-source $HOME/.zshrc
+```sh
+brew install pyenv
+# Or if on Linux
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+```
 
-pyenv install 3.10.6
-pyenv global 3.10.6
+```sh
+pyenv init
+pyenv install 3.11.3
+pyenv global 3.11.3
 
 # Update pip
 python -m pip install -U pip
 
-# Python packages I use
-python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair scipy scikit-learn sympy nose statsmodels
+# Some Python packages
+python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair scipy scikit-learn sympy nose statsmodels seaborn
+```
+
+### Node.js
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+nvm install --lts
 ```
 
 ### R
 
-```bash
+```sh
 brew install r
+# or If on Linux
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+sudo apt install --no-install-recommends r-base
 ```
 
 Inside the R console, install tinytex to knit to pdf.
@@ -117,6 +96,12 @@ Install [Tidyverse](https://www.tidyverse.org)
 
 ```r
 install.packages("tidyverse")
+```
+
+### Other software installed with Homebrew
+
+```sh
+brew install openjdk redis imagemagick vips poppler
 ```
 
 ### PostgreSQL
@@ -135,4 +120,37 @@ You can remove the quarantine attribute with the `xattr` command.
 
 ```sh
 xattr -d com.apple.quarantine /Applications/AppName.app
+```
+
+## Local Shell
+
+I keep my `.zshrc` file lightweight. Most things are per machine in a non-tracked `~/.dotfiles/local/shell` file.
+
+On a Mac, the contents tend to look like this:
+
+```sh
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+export HOMEBREW_NO_ENV_HINTS="1"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# OpenJDK
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+# Postgres
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
+# Ruby
+eval "$(rbenv init - zsh)"
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Node.js
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
