@@ -85,7 +85,14 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_
 sudo apt install --no-install-recommends r-base
 ```
 
-Inside the R console, install tinytex to knit to pdf.
+
+Install [devtools](https://devtools.r-lib.org)
+
+```r
+install.packages("devtools")
+```
+
+Inside the R console, install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
 
 ```r
 install.packages("tinytex")
@@ -96,6 +103,13 @@ Install [Tidyverse](https://www.tidyverse.org)
 
 ```r
 install.packages("tidyverse")
+```
+
+Install [lolcat](https://github.com/burrm/lolcat)
+
+```r
+require(devtools)
+install_github("burrm/lolcat")
 ```
 
 ### Other software installed with Homebrew
