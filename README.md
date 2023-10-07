@@ -115,7 +115,7 @@ install_github("burrm/lolcat")
 ### Other software installed with Homebrew
 
 ```sh
-brew install openjdk redis imagemagick vips poppler
+brew install openjdk@17 redis imagemagick vips poppler
 ```
 
 ### PostgreSQL
@@ -149,8 +149,8 @@ export HOMEBREW_NO_ENV_HINTS="1"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # OpenJDK
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 
 # Postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
