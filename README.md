@@ -56,9 +56,12 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 ```
 
 ```sh
+# Install dependency that is missing on macOS
+brew install xz
+
 pyenv init
-pyenv install 3.11.3
-pyenv global 3.11.3
+pyenv install 3.11.6
+pyenv global 3.11.6
 
 # Update pip
 python -m pip install -U pip
@@ -71,28 +74,30 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install --lts
+nvm install lts/hydrogen # Node v18.18
+nvm alias default lts/hydrogen
 ```
 
 ### R
 
 ```sh
-brew install r
-# or If on Linux
+brew install R
+# Or if on Linux
 sudo apt install --no-install-recommends software-properties-common dirmngr
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 sudo apt install --no-install-recommends r-base
 ```
 
+#### R Packages
 
-Install [devtools](https://devtools.r-lib.org)
+Install [devtools](https://devtools.r-lib.org).
 
 ```r
 install.packages("devtools")
 ```
 
-Inside the R console, install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
+Install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
 
 ```r
 install.packages("tinytex")
@@ -148,10 +153,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_NO_ENV_HINTS="1"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# OpenJDK
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
-
 # Postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -167,4 +168,8 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# OpenJDK
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 ```
