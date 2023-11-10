@@ -23,6 +23,9 @@ Install [Homebrew](https://brew.sh)
 echo 'Install Commandline Tools for macOS'
 xcode-select --install
 
+ech 'Install Rosetta'
+softwareupdate --install-rosetta --agree-to-license
+
 echo 'Install Homebrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
