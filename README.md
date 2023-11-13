@@ -12,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 Setup dotfiles
 
-```
+```sh
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 $HOME/.dotfiles/init/install.sh
 ```
