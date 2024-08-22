@@ -43,8 +43,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.1.4
-rbenv global 3.1.4
+rbenv install 3.3.4
+rbenv global 3.3.4
 
 gem install bundler
 rbenv rehash
@@ -63,8 +63,8 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 brew install xz
 
 pyenv init
-pyenv install 3.11.6
-pyenv global 3.11.6
+pyenv install 3.12.5
+pyenv global 3.12.5
 
 # Update pip
 python -m pip install -U pip
@@ -77,8 +77,8 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install lts/hydrogen # Node v18.18
-nvm alias default lts/hydrogen
+nvm install --lts
+nvm alias default --lts
 ```
 
 ### R
