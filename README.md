@@ -7,6 +7,7 @@ Contains my dotfiles.
 Install [Oh My Zsh](https://ohmyz.sh/#)
 
 ```sh
+sudo apt install zsh # if on Linux
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -31,6 +32,12 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
+### Linux dev libraries
+
+```sh
+sudo apt install git autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev liblzma-dev
+```
+
 ## Software
 
 ### Ruby
@@ -46,6 +53,7 @@ rbenv init
 rbenv install 3.3.4
 rbenv global 3.3.4
 
+gem update --system
 gem install bundler
 rbenv rehash
 ```
@@ -76,9 +84,9 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 ### Node.js
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install --lts
-nvm alias default --lts
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+nvm install --lts # Currently v20
+nvm alias default 20
 ```
 
 ### R
