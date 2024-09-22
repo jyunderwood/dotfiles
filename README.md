@@ -50,8 +50,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.3.4
-rbenv global 3.3.4
+rbenv install 3.3.5
+rbenv global 3.3.5
 
 gem update --system
 gem install bundler
@@ -71,8 +71,8 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 brew install xz
 
 pyenv init
-pyenv install 3.12.5
-pyenv global 3.12.5
+pyenv install 3.12.6
+pyenv global 3.12.6
 
 # Update pip
 python -m pip install -U pip
@@ -84,7 +84,7 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 ### Node.js
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install --lts # Currently v20
 nvm alias default 20
 ```
@@ -108,13 +108,6 @@ Install [devtools](https://devtools.r-lib.org).
 install.packages("devtools")
 ```
 
-Install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
-
-```r
-install.packages("tinytex")
-tinytex::install_tinytex()
-```
-
 Install [Tidyverse](https://www.tidyverse.org)
 
 ```r
@@ -126,6 +119,13 @@ Install [lolcat](https://github.com/burrm/lolcat)
 ```r
 require(devtools)
 install_github("burrm/lolcat")
+```
+
+Install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
+
+```r
+install.packages("tinytex")
+tinytex::install_tinytex()
 ```
 
 ### Other software installed with Homebrew
