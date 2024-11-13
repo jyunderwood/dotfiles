@@ -85,7 +85,7 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install --lts # Currently v20
+nvm install 20
 nvm alias default 20
 ```
 
@@ -168,11 +168,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # Ruby
-eval "$(rbenv init - zsh)"
+eval "$(rbenv init - --no-rehash zsh)"
 
 # Python
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Node.js
