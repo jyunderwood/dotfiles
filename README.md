@@ -24,7 +24,7 @@ Install [Homebrew](https://brew.sh)
 echo 'Install Commandline Tools for macOS'
 xcode-select --install
 
-ech 'Install Rosetta'
+echo 'Install Rosetta'
 softwareupdate --install-rosetta --agree-to-license
 
 echo 'Install Homebrew'
@@ -50,8 +50,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.3.5
-rbenv global 3.3.5
+rbenv install 3.3.6
+rbenv global 3.3.6
 
 gem update --system
 gem install bundler
@@ -71,8 +71,8 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 brew install xz
 
 pyenv init
-pyenv install 3.12.6
-pyenv global 3.12.6
+pyenv install 3.12.7
+pyenv global 3.12.7
 
 # Update pip
 python -m pip install -U pip
