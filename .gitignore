@@ -1,12 +1,3 @@
 .DS_Store
 
 local/
-
-apps/xcode/*.xcuserstate
-apps/xcode/IB Support
-
-apps/vim/.netrwhist
-apps/vim/dirs/backups/
-!apps/vim/dirs/backups/.keep
-apps/vim/dirs/swaps/
-!apps/vim/dirs/swaps/.keep

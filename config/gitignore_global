@@ -1,23 +1,23 @@
 .DS_Store
 
 # Ruby
+
 /.bundle/
 .sass-cache
-.ruby-version
-.ruby-gemset
-.rvmrc
-*.gem
-*.rbc
+_.gem
+_.rbc
 
 # Python
-__pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-*.egg
+
+**pycache**/
+_.py[cod]
+_.so
+_.egg-info/
+_.egg
 pip-log.txt
 pip-delete-this-directory.txt
 
 # Node
+
 .grunt
 node_modules
