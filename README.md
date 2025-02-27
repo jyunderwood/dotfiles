@@ -50,8 +50,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.3.6
-rbenv global 3.3.6
+rbenv install 3.3.7
+rbenv global 3.3.7
 
 gem update --system
 gem install bundler
@@ -71,8 +71,8 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 brew install xz
 
 pyenv init
-pyenv install 3.12.7
-pyenv global 3.12.7
+pyenv install 3.12
+pyenv global 3.12
 
 # Update pip
 python -m pip install -U pip
@@ -85,8 +85,8 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install 20
-nvm alias default 20
+nvm install 22
+nvm alias default 22
 ```
 
 ### R
