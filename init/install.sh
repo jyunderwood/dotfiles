@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [[ -s ~/.dotfiles/local/ ]]; then
   echo "Dotfiles already installed!"
 
