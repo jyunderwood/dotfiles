@@ -50,8 +50,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.3.7
-rbenv global 3.3.7
+rbenv install 3.3.8
+rbenv global 3.3.8
 
 gem update --system
 gem install bundler
@@ -77,8 +77,8 @@ pyenv global 3.12
 # Update pip
 python -m pip install -U pip
 
-# Some Python packages
-python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair scipy scikit-learn sympy nose statsmodels seaborn
+# Install JupyterLab
+python -m pip install jupyterlab
 ```
 
 ### Node.js
@@ -87,51 +87,6 @@ python -m pip install jupyterlab numpy matplotlib pillow pandas requests altair 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install 22
 nvm alias default 22
-```
-
-### R
-
-```sh
-brew install R
-# Or if on Linux
-sudo apt install --no-install-recommends software-properties-common dirmngr
-wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
-sudo apt install --no-install-recommends r-base
-```
-
-#### R Packages
-
-Install [devtools](https://devtools.r-lib.org).
-
-```r
-install.packages("devtools")
-```
-
-Install [Tidyverse](https://www.tidyverse.org)
-
-```r
-install.packages("tidyverse")
-```
-
-Install [lolcat](https://github.com/burrm/lolcat)
-
-```r
-require(devtools)
-install_github("burrm/lolcat")
-```
-
-Install [tinytex](https://yihui.org/tinytex/) to knit to pdf.
-
-```r
-install.packages("tinytex")
-tinytex::install_tinytex()
-```
-
-### Other software installed with Homebrew
-
-```sh
-brew install openjdk@17 redis imagemagick vips poppler
 ```
 
 ### PostgreSQL
@@ -174,13 +129,10 @@ eval "$(rbenv init - --no-rehash zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# OpenJDK
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 ```
