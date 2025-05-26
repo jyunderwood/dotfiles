@@ -34,8 +34,16 @@ brew doctor
 
 ### Linux dev libraries
 
+Ubuntu:
+
 ```sh
-sudo apt install git autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev liblzma-dev
+sudo apt install git autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev liblzma-dev libsqlite3-dev tk-dev tcl-dev
+```
+
+Fedora:
+
+```sh
+sudo dnf install @development-tools git rust cargo openssl-devel libyaml-devel readline-devel zlib-devel gmp-devel ncurses-devel libffi-devel gdbm-devel libdb-devel libuuid-devel xz-devel sqlite-devel tk-devel tcl-devel
 ```
 
 ## Software
@@ -50,8 +58,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 
 ```sh
 rbenv init
-rbenv install 3.3.8
-rbenv global 3.3.8
+rbenv install 3.4.4
+rbenv global 3.4.4
 
 gem update --system
 gem install bundler
@@ -84,9 +92,9 @@ python -m pip install jupyterlab
 ### Node.js
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install 22
-nvm alias default 22
+curl -fsSL https://github.com/nodenv/nodenv-installer/raw/HEAD/bin/nodenv-installer | bash
+nodenv install 22.16.0
+nodenv global 22.16.0
 ```
 
 ### PostgreSQL
@@ -132,7 +140,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Node.js
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NODENV_ROOT="$HOME/.nodenv"
+[[ -d $NODENV_ROOT ]] && export PATH="$NODENV_ROOT/bin:$PATH"
+eval "$(nodenv init - bash)"
 ```
