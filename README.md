@@ -43,7 +43,7 @@ sudo apt install git autoconf patch build-essential rustc libssl-dev libyaml-dev
 Fedora:
 
 ```sh
-sudo dnf install @development-tools git rust cargo openssl-devel libyaml-devel readline-devel zlib-devel gmp-devel ncurses-devel libffi-devel gdbm-devel libdb-devel libuuid-devel xz-devel sqlite-devel tk-devel tcl-devel
+sudo dnf install @development-tools git rust cargo openssl-devel libyaml-devel readline-devel zlib-devel gmp-devel ncurses-devel libffi-devel gdbm-devel libdb-devel libuuid-devel xz-devel gcc-c++ sqlite-devel tk-devel tcl-devel
 ```
 
 ## Software
