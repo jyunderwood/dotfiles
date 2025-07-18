@@ -32,7 +32,7 @@ echo 'Install Homebrew'
 brew doctor
 ```
 
-### Linux dev libraries
+### Dev libraries
 
 Ubuntu:
 
@@ -46,55 +46,29 @@ Fedora:
 sudo dnf install @development-tools git rust cargo openssl-devel libyaml-devel readline-devel zlib-devel gmp-devel ncurses-devel libffi-devel gdbm-devel libdb-devel libuuid-devel xz-devel gcc-c++ sqlite-devel tk-devel tcl-devel
 ```
 
+macOS:
+
+```sh
+brew install openssl libyaml readline xz
+```
+
 ## Software
 
-### Ruby
+Using [mise-en-place](https://mise.jdx.dev/) for managing the versions of [Ruby](https://ruby-lang.org), [Python](https://python.org), and [Node.js](https://nodejs.org).
 
 ```sh
-brew install rbenv
-# Or if on Linux
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+curl https://mise.run | sh
+# or for macOS: brew install mise
+
+# Then add to the shell
+echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
+# or for macOS: echo 'eval "$(/opt/homebrew/bin/mise activate zsh)"' >> ~/.zshrc
 ```
 
 ```sh
-rbenv init
-rbenv install 3.4.4
-rbenv global 3.4.4
-
-gem update --system
-gem install bundler
-rbenv rehash
-```
-
-### Python
-
-```sh
-brew install pyenv
-# Or if on Linux
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-```
-
-```sh
-# Install dependency that is missing on macOS
-brew install xz
-
-pyenv init
-pyenv install 3.12
-pyenv global 3.12
-
-# Update pip
-python -m pip install -U pip
-
-# Install JupyterLab
-python -m pip install jupyterlab
-```
-
-### Node.js
-
-```sh
-curl -fsSL https://github.com/nodenv/nodenv-installer/raw/HEAD/bin/nodenv-installer | bash
-nodenv install 22.16.0
-nodenv global 22.16.0
+mise use --global ruby@3.4
+mise use --global python@3.13
+mise use --global node@24
 ```
 
 ### PostgreSQL
