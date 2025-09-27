@@ -4,11 +4,11 @@ Contains my dotfiles.
 
 ## Setup
 
-Install [Oh My Zsh](https://ohmyz.sh/#)
+Install [Oh My Zsh](https://ohmyz.sh/)
 
 ```sh
 sudo apt install zsh # if on Linux
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Setup dotfiles
@@ -76,7 +76,7 @@ mise use --global node@24
 On a Mac, using [Postgres.app](https://postgresapp.com), add its CLI tools to the path with:
 
 ```sh
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/16/bin:$PATH"
 ```
 
 ## Quarantine Attribute on macOS
@@ -102,19 +102,8 @@ export HOMEBREW_NO_ENV_HINTS="1"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/16/bin:$PATH"
 
-# Ruby
-eval "$(rbenv init - --no-rehash zsh)"
-
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Node.js
-export NODENV_ROOT="$HOME/.nodenv"
-[[ -d $NODENV_ROOT ]] && export PATH="$NODENV_ROOT/bin:$PATH"
-eval "$(nodenv init - bash)"
+# Mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 ```
