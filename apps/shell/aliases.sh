@@ -12,9 +12,6 @@ alias rm.dss='find . -type f -name ".DS_Store" -exec rm {} \;'
 alias bx='bundle exec'
 alias guard='bundle exec guard -c'
 
-# Force the use of the Intel binary on Apple Silicon
-alias irun='arch -x86_64'
-
 # Xcode
 alias xcs.stable='sudo xcode-select -s /Applications/Xcode.app/Contents/Developer'
 alias xcs.beta='sudo xcode-select -s /Applications/Xcode-beta.app/Contents/Developer'

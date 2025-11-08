@@ -1,23 +1,29 @@
 .DS_Store
 
-# Ruby
-
-/.bundle/
-.sass-cache
-_.gem
-_.rbc
+*.so
 
 # Python
 
-**pycache**/
-_.py[cod]
-_.so
-_.egg-info/
-_.egg
+__pycache__/
+*.py[codz]
+*$py.class
+*.egg-info/
+*.egg
 pip-log.txt
 pip-delete-this-directory.txt
+.pytest_cache/
+.ipynb_checkpoints
+
+# Ruby
+
+/.bundle/
+*.gem
+*.rbc
 
 # Node
 
-.grunt
-node_modules
+node_modules/
+jspm_packages/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
