@@ -26,6 +26,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+
+# Postgresql
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 ```
 
 ## Quarantine Attribute on macOS
