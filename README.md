@@ -56,7 +56,7 @@ On Linux, in case you need to use `bash`, also make sure mise is activated there
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 ```
 
-###
+### Python, Node, and Ruby
 
 ```sh
 mise use --global python@3.14
