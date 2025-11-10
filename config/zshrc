@@ -20,5 +20,6 @@ export PATH="/usr/local/bin:$PATH"
 # Editor
 export EDITOR="code -w"
 
-source $HOME/.dotfiles/apps/shell/aliases.sh
+source $HOME/.dotfiles/apps/shell/aliases
+source $HOME/.dotfiles/apps/shell/datastores
 source $HOME/.dotfiles/local/shell
