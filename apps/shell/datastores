@@ -1,3 +1,4 @@
 # Start and stop all datastores defined in the Docker Compose file
 alias dsup='docker compose -f ~/.dotfiles/datastores/compose.yml up -d'
 alias dsdown='docker compose -f ~/.dotfiles/datastores/compose.yml down'
+alias dspull='docker compose -f ~/.dotfiles/datastores/compose.yml pull && docker compose -f ~/.dotfiles/datastores/compose.yml up -d'

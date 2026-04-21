@@ -104,6 +104,7 @@ Instead of installing loads of data storage engines for local development, just 
 
 - PostgresSQL 16
 - Redis 8
+- rustfs (s3 object storage)
 
 ```sh
 cd ~/.dotfiles/datastores
