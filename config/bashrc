@@ -1,0 +1,73 @@
+# Skip the rest in non-interactive shells.
+[[ $- != *i* ]] && return
+
+###############################################################################
+# History                                                                     #
+###############################################################################
+
+HISTSIZE=10000
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+shopt -s checkwinsize
+
+# Up/down arrow searches history for entries matching what's typed before the
+# cursor (e.g. type "git p" then ↑ to cycle through past "git pull", "git push").
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+###############################################################################
+# Completion                                                                  #
+###############################################################################
+
+# Readline behavior (case-insensitive completion, prefix history search on
+# ↑/↓) lives in ~/.inputrc so it applies to every readline-using REPL.
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+###############################################################################
+# Prompt                                                                      #
+###############################################################################
+
+__dotfiles_prompt() {
+  local exit=$?
+
+  local arrow
+  if [ $exit -eq 0 ]; then
+    arrow='\[\e[32m\]➜\[\e[0m\]'
+  else
+    arrow='\[\e[31m\]➜\[\e[0m\]'
+  fi
+
+  local git=""
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null) \
+    || branch=$(git rev-parse --short HEAD 2>/dev/null)
+  if [ -n "$branch" ]; then
+    local dirty=""
+    if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
+      dirty=' \[\e[33m\]✗\[\e[0m\]'
+    fi
+    git=" \[\e[34m\]git:(\[\e[31m\]${branch}\[\e[34m\])\[\e[0m\]${dirty}"
+  fi
+
+  PS1="${arrow} \[\e[36m\]\W\[\e[0m\]${git} "
+}
+PROMPT_COMMAND=__dotfiles_prompt
+
+###############################################################################
+# ENV                                                                         #
+###############################################################################
+
+export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
+export EDITOR="code -w"
+
+[ -f $HOME/.dotfiles/apps/shell/aliases ]    && source $HOME/.dotfiles/apps/shell/aliases
+[ -f $HOME/.dotfiles/apps/shell/datastores ] && source $HOME/.dotfiles/apps/shell/datastores
+[ -f $HOME/.dotfiles/local/shell ]           && source $HOME/.dotfiles/local/shell

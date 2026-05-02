@@ -1,0 +1,13 @@
+# Case-insensitive completion, with sensible disambiguation.
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set menu-complete-display-prefix on
+
+# Up/down arrow searches history for entries matching what's typed before the
+# cursor (e.g. type "git p" then ↑ to cycle through past "git pull", "git push").
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Pull in the system defaults too, where present.
+$include /etc/inputrc

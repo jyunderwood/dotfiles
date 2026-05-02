@@ -4,25 +4,16 @@ Contains my dotfiles.
 
 ## Setup
 
-Install and change to zsh
+These dotfiles ship a `zshrc` (used on macOS) and a `bashrc` (used on Linux). Both provide case-insensitive tab completion, prefix-based history search on the up/down arrows, and a git-aware prompt.
 
-```sh
-sudo apt install zsh
-sudo chsh -s /usr/bin/zsh
-```
-
-Install [Oh My Zsh](https://ohmyz.sh/)
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-Setup dotfiles
+Setup dotfiles:
 
 ```sh
 git clone git@github.com:jyunderwood/dotfiles.git $HOME/.dotfiles
 $HOME/.dotfiles/init/install.sh
 ```
+
+The installer symlinks every file in `config/` into `$HOME` (e.g. `config/zshrc` → `~/.zshrc`, `config/bashrc` → `~/.bashrc`), so the right shell picks up its config automatically.
 
 ## Dev libraries
 
