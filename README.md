@@ -52,7 +52,7 @@ echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 ```sh
 mise use --global python@3.14
 mise use --global node@24
-mise use --global ruby@3.4
+mise use --global ruby@4.0
 ```
 
 Update language package managers
@@ -100,6 +100,7 @@ Instead of installing loads of data storage engines for local development, just 
 ```sh
 cd ~/.dotfiles/datastores
 docker compose up -d
+# Or use the the aliases: dsup, dsdown, dspull
 ```
 
 Since PostgreSQL isn't installed on the machine, you'll probably still need a dev library and client.
